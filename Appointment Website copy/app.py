@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template, request, redirect, session, url_for
 import re
 import sqlite3
@@ -102,8 +101,6 @@ def signup():
     return render_template('signup.html')
 
 
-
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     session.pop('messages', None)
@@ -126,8 +123,8 @@ def login():
             conn.close()
 
             if user:
-                # Login successful, redirect to appointment page
-                return redirect(url_for('appointment'))
+                # Login successful, redirect to the dashboard page
+                return redirect(url_for('dashboard'))
             else:
                 # Show error message
                 session['messages'] = ["Invalid username or password."]
@@ -137,6 +134,10 @@ def login():
 
     return render_template('login.html')
 
+
+@app.route('/dashboard')
+def dashboard():
+    return render_template('dashboard.html')
 
 @app.route('/appointment')
 def appointment():
