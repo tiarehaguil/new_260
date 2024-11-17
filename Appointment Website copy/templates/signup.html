@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CSN Sign Up</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation Header -->
+<div class="main-nav">
+  <ul class="nav">
+    <img src="{{ url_for('static', filename='images/csn logo.png') }}" alt="CSN Logo" class="profile-image">
+    <li><a href="{{ url_for('home') }}">Home</a></li>
+    <li><a href="{{ url_for('home') }}">Logout</a></li>
+    <li><a href="{{ url_for('appointment') }}">Appointments</a></li>
+  </ul>
+</div>
+
+<!-- Main Content -->
+<main class="flex">
+  <div class="card">
+      <h1 class="form">Sign Up</h1>
+      <hr>
+      
+      <!-- Display Session Messages for Feedback directly above form -->
+      {% if session.get('messages') %}
+        <div class="flash-messages">
+          <ul>
+            {% for message in session['messages'] %}
+              <li>{{ message }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+      <!-- Display Success Message -->
+        {% if session.get('success_message') %}
+        <div class="success-message">
+          <p>{{ session['success_message'] }}</p>
+        </div>
+        {% endif %}
+
+      <!-- Sign Up Form -->
+      <form action="{{ url_for('signup') }}" method="POST">
+          <label for="first_name"><strong>First Name:</strong></label>
+          <input type="text" id="first_name" placeholder="Enter First Name" name="first_name" required>
+
+          <label for="last_name"><strong>Last Name:</strong></label>
+          <input type="text" id="last_name" placeholder="Enter Last Name" name="last_name" required>
+
+          <label for="email"><strong>Email:</strong></label>
+          <input type="email" id="email" placeholder="Enter Email" name="email" required>
+
+          <label for="username"><strong>Username:</strong></label>
+          <input type="text" id="username" placeholder="Enter Username" name="username" required>
+
+          <label for="password"><strong>Password:</strong></label>
+          <input type="password" id="password" placeholder="Enter Password" name="password" required>
+
+          <div>
+            <input type="submit" value="Sign Up">
+          </div>
+      </form>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer>
+  <ul>
+    <li><a href="https://x.com/CSNCoyote" target="_blank" class="social twitter">Twitter</a></li>
+    <li><a href="https://www.linkedin.com/school/college-of-southern-nevada/" target="_blank" class="social linkedin">LinkedIn</a></li>
+  </ul>
+  <p class="copyright">&copy; 2024 College of Southern Nevada</p>
+</footer>
+
+</body>
+</html>
