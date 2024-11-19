@@ -95,14 +95,14 @@ header {
   max-width: 400px;
   text-align: left;
   background: whitesmoke;
-  border-bottom: 4px solid #c8ff00;
+  border-bottom: 4px solid #0011ff;
   border-radius: 15px;
   transition: all .5s;
   
 }
 
 .card:hover {
-  border-color: #0c00eb;
+  border-color: #d0eb00;
 }
 
 .card3 {
