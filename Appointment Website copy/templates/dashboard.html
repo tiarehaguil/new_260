@@ -62,7 +62,6 @@
 <div class="main-nav">
   <ul class="nav">
     <img src="{{ url_for('static', filename='images/csn logo.png') }}" alt="CSN Logo" class="profile-image">
-    <li><a href="{{ url_for('home') }}">Home</a></li>
     <li><a href="{{ url_for('home') }}">Logout</a></li>
   </ul>
 </div>
@@ -72,7 +71,7 @@
   <!-- Reservation Options -->
   <button class="reservation-box" onclick="window.location.href='{{ url_for('appointment') }}'">Appointments</button>
   <button class="reservation-box" onclick="window.location.href='{{ url_for('reservation') }}'">Reservations</button>
-  <button class="reservation-box">Cancellations</button>
+  <button class="reservation-box" onclick="window.location.href='{{ url_for('cancellation') }}'">Cancellations</button>
 </div>
 
 <!-- Footer -->

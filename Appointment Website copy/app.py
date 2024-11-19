@@ -147,6 +147,10 @@ def appointment():
 def reservation():
     return render_template('reservation.html')
 
+@app.route('/cancellation')
+def cancellation():
+    return render_template('cancellation.html')
+
 # Run the app
 if __name__ == "__main__":
     app.run(debug=True)
