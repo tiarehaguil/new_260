@@ -69,10 +69,11 @@
 <!-- Main Content -->
 <div class="main-container">
   <!-- Reservation Options -->
-  <button class="reservation-box" onclick="window.location.href='{{ url_for('appointment') }}'">Appointments</button>
-  <button class="reservation-box" onclick="window.location.href='{{ url_for('reservation') }}'">Reservations</button>
-  <button class="reservation-box" onclick="window.location.href='{{ url_for('cancellation') }}'">Cancellations</button>
+  <a href="{{ url_for('appointment') }}" class="reservation-box">Appointments</a>
+  <a href="{{ url_for('reservation') }}" class="reservation-box">Reservations</a>
+  <a href="{{ url_for('cancellation') }}" class="reservation-box">Cancellations</a>
 </div>
+
 
 <!-- Footer -->
 <footer>

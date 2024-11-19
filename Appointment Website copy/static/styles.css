@@ -95,14 +95,14 @@ header {
   max-width: 400px;
   text-align: left;
   background: whitesmoke;
-  border-bottom: 4px solid #190ae9;
+  border-bottom: 4px solid #c8ff00;
   border-radius: 15px;
   transition: all .5s;
   
 }
 
 .card:hover {
-  border-color: #f2f609;
+  border-color: #0c00eb;
 }
 
 .card3 {
@@ -110,14 +110,42 @@ header {
   padding: 10px 10px 10px;
   max-width: 500px;
   text-align: left;
-  background: whitesmoke;
+  background: white;
   border-radius: 15px;
   transition: all .5s;
   border-bottom: 4px solid #0004ff;
 }
 
 .card3:hover {
-  border-color: #f2f609;
+  border-color: #bbf802;
+}
+
+
+
+.card2 {
+  margin: 40px; /* Increased margin for more space */
+  padding: 10px 10px; /* Added more top and bottom padding */
+  max-width: 500px;
+  text-align: left;
+  background: white;
+  border-radius: 15px;
+  transition: all .5s;
+  border: 4px solid #000000;
+}
+
+.card2:hover {
+  border-color: #05009b;
+}
+
+
+.card4 {
+  margin: 30px;
+  padding: 10px 10px 10px;
+  max-width: 500px;
+  text-align: left;
+  background: white;
+  border-radius: 15px;
+  transition: all .5s;
 }
 
 .intro {
@@ -126,7 +154,7 @@ header {
 }
 
 .subsection {
-  color: rgb(2, 2, 177);
+  color: rgb(0, 0, 160);
 }
 
 /* Styles for larger screens */
@@ -158,7 +186,6 @@ header {
 form {
   display: inline-block;
   text-align: left;
-  border: 1px solid rgb(14, 6, 247);
   padding: 20px;
 }
 
